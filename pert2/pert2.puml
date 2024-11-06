@@ -1,0 +1,13 @@
+@startuml pert2
+left to right direction
+
+actor User as user
+package Restoran {
+    actor Servent as serv
+    actore chief as chief
+}
+
+package Restoran {
+    usecase "Pesan Menu" as U1
+    usecase "Pesan Menu" as U1
+}
