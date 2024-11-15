@@ -1,0 +1,51 @@
+@startuml
+
+:Input Email dan Password;
+
+if (Login Berhasil?) then (Ya)
+  if (Peran: Admin?) then (Ya)
+    :Tugas Admin;
+    :Kelola Data Pelanggan;
+    if (Data Baru?) then (Ya)
+      :Tambah Data Pelanggan;
+    else (Tidak)
+      if (Update Data?) then (Ya)
+        :Ubah Data Pelanggan;
+      else (Tidak)
+        :Hapus Data Pelanggan;
+      endif
+    endif
+    :Kelola Kategori Pelanggan;
+    :Catat Interaksi Pelanggan;
+    :Setel Pengingat/Promosi;
+    :Generate Laporan (Opsional);
+    if (Selesai?) then (Ya)
+      :Logout;
+      stop
+    else (Tidak)
+      :Kembali ke Menu Utama;
+    endif
+  else (Tidak)
+    :Tugas Pelanggan;
+    :Cari Data Pelanggan;
+    if (Data Tidak Ada?) then (Ya)
+      :Tambah Data Baru (Pelanggan);
+    else (Tidak)
+      :Lihat Data Pelanggan;
+    endif
+    :Generate Laporan (Opsional);
+    if (Selesai?) then (Ya)
+      :Logout;
+      stop
+    else (Tidak)
+      :Kembali ke Menu Utama;
+    endif
+  endif
+  stop
+else (Tidak)
+  :Tampilkan Pesan Gagal;
+  :Kembali ke Halaman Inputan;
+  stop
+endif
+
+@enduml

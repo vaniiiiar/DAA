@@ -1,0 +1,49 @@
+@startuml
+
+actor Admin
+actor Pelanggan
+
+usecase "Login" as UC1
+usecase "Masukkan Email dan Password" as UC2
+usecase "Cek Kredensial" as UC3
+usecase "Login Berhasil sebagai Admin" as UC19A
+usecase "Login Berhasil sebagai Pelanggan" as UC19P
+usecase "Login Gagal" as UC4
+usecase "Logout" as UC5
+
+usecase "Kelola Data Pelanggan" as UC6
+usecase "Tambah Pelanggan" as UC7
+usecase "Edit Pelanggan" as UC8
+usecase "Hapus Pelanggan" as UC9
+usecase "Lihat Riwayat Transaksi" as UC10
+usecase "Kelola Program Loyalitas" as UC11
+
+usecase "Proses Transaksi Penjualan" as UC15
+usecase "Tambah Poin Loyalitas" as UC12
+usecase "Cek Poin Loyalitas" as UC13
+
+Admin --> UC1
+Pelanggan --> UC1
+UC1 --> UC2
+UC2 --> UC3
+UC3 --> UC19A : Jika Admin
+UC3 --> UC19P : Jika Pelanggan
+UC3 --> UC4 : Login Gagal
+UC4 --> UC2
+
+UC19A --> UC6
+UC19A --> UC10
+UC19A --> UC11
+
+UC19P --> UC15
+UC19P --> UC12
+UC19P --> UC13
+
+UC6 --> UC7
+UC6 --> UC8
+UC6 --> UC9
+
+Admin --> UC5
+Pelanggan --> UC5
+
+@enduml
