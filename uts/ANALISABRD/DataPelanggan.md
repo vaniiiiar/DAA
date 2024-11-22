@@ -1,7 +1,3 @@
-Berikut adalah revisi dokumen persyaratan bisnis (BRD) yang mengubah "Kasir" menjadi "Pelanggan" dalam sistem manajemen data pelanggan:
-
----
-
 # Dokumen Persyaratan Bisnis (BRD)  
 ### Proyek: Sistem Manajemen Data Pelanggan  
 **Versi:** 1.0  
