@@ -41,6 +41,13 @@ if (Login Berhasil?) then (Ya)
       :Kembali ke Menu Utama;
     endif
   endif
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 3c2dd52 (UAS)
+>>>>>>> 4bd1610 (UAS)
   stop
 else (Tidak)
   :Tampilkan Pesan Gagal;

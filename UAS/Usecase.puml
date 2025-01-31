@@ -1,0 +1,33 @@
+@startuml
+actor "Staff Akademik" as StaffAkademik
+actor "Pengajar" as Pengajar
+actor "Peserta" as Peserta
+
+(Masuk ke Website)
+(Masuk ke Website) --> (Masukkan Nomor)
+(Masukkan Nomor) --> (Registrasi)
+(Registrasi) --> (Login)
+(Login) --> (Sebagai Apa?)
+
+(Sebagai Apa?) --> (Staff) : Jika Staff
+(Sebagai Apa?) --> (Pengajar) : Jika Pengajar
+(Sebagai Apa?) --> (Peserta) : Jika Peserta
+
+(Staff) --> (Mengelola Akun)
+(Staff) --> (Mengawasi Proses Ujian)
+(Staff) --> (Menerima Laporan Hasil Ujian)
+
+(Pengajar) --> (Menyusun Soal Ujian)
+(Pengajar) --> (Menjadwalkan Ujian)
+(Pengajar) --> (Memantau Proses Ujian)
+(Pengajar) --> (Menilai Hasil Ujian)
+(Pengajar) --> (Menyampaikan Hasil Ujian)
+
+(Peserta) --> (Memilih Mata Pelajaran)
+(Peserta) --> (Memasukkan Kode Unik Mapel)
+(Peserta) --> (Memulai Ujian)
+(Peserta) --> (Mengerjakan Soal Ujian)
+(Peserta) --> (Mengirimkan Jawaban)
+(Peserta) --> (Menerima Hasil Ujian)
+
+@enduml

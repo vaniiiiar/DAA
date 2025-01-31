@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 pert2/sampleapp/db/data/*
 pert2/sampleapp/src/*
 pert3/sampleapp/db/data/*
 pert3/sampleapp/src/*
 UTS/sampleapp/db/data/*``
+=======
+data/
+>>>>>>> 4bd1610 (UAS)

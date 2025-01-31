@@ -1,0 +1,29 @@
+@startuml
+start
+
+:Masuk ke Website;
+:Masukkan Nomor Peserta;
+
+if (Nomor Valid?) then (Ya)
+  :Registrasi sebagai Peserta;
+  :Login sebagai Peserta;
+  :Memilih Mata Pelajaran;
+  :Memasukkan Kode Unik Mapel;
+  if (Kode Unik Valid?) then (Ya)
+    :Memulai Ujian;
+    :Mengerjakan Soal Ujian;
+    :Mengirimkan Jawaban;
+    :Menerima Hasil Ujian;
+    stop
+  else
+    :Kode Unik Tidak Valid;
+    :Kembali ke Halaman Utama;
+    stop
+  endif
+else
+  :Nomor Tidak Valid;
+  :Kembali ke Masuk ke Website;
+  stop
+endif
+
+@enduml

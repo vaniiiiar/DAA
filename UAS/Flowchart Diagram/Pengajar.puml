@@ -1,0 +1,23 @@
+@startuml
+start
+
+:Masuk ke Website;
+:Masukkan Nomor Pengajar;
+
+if (Nomor Valid?) then (Ya)
+  :Registrasi sebagai Pengajar;
+  :Login sebagai Pengajar;
+  :Melakukan Tugas Pengajar;
+  :Menyusun Soal Ujian;
+  :Menjadwalkan Ujian;
+  :Memantau Proses Ujian;
+  :Menilai Hasil Ujian (Jika Perlu Penilaian Manual);
+  :Menyampaikan Hasil Ujian ke Peserta;
+  stop
+else
+  :Nomor Tidak Valid;
+  :Kembali ke Masuk ke Website;
+  stop
+endif
+
+@enduml

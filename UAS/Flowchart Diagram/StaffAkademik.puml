@@ -1,0 +1,22 @@
+@startuml
+start
+
+:Masuk ke Website;
+:Masukkan Nomor Staff Akademik;
+
+if (Nomor Valid?) then (Ya)
+  :Registrasi sebagai Staff Akademik;
+  :Login sebagai Staff Akademik;
+  :Melakukan Tugas Staff Akademik;
+  :Mengelola Akun Pengajar dan Peserta;
+  :Menjadwalkan Ujian;
+  :Mengawasi Proses Ujian;
+  :Menerima Laporan Hasil Ujian;
+  stop
+else
+  :Nomor Tidak Valid;
+  :Kembali ke Masuk ke Website;
+  stop
+endif
+
+@enduml
